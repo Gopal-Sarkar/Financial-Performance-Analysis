@@ -89,37 +89,50 @@ Performance is genuinely consistent company-wide — it isn't being propped up b
 - Entity-level profitability beyond aggregate top-10 concentration
 
 ## Repository Structure
+
+```
 Financial-Performance-Analysis/
 ├── README.md
 ├── SQL/
-│ └── create_tables_and_load.sql
+│   └── create_tables_and_load.sql
 ├── Raw_Data/
-│ ├── Customers.csv
-│ ├── Vendors.csv
-│ ├── Headcount.csv
-│ ├── Budget.csv
-│ └── Financial_Transactions.csv
+│   ├── Customers.csv
+│   ├── Vendors.csv
+│   ├── Headcount.csv
+│   ├── Budget.csv
+│   └── Financial_Transactions.csv
 ├── Excel_Validated_Data/
-│ ├── Customers_validated.xlsx
-│ ├── Vendors_validated.xlsx
-│ ├── Headcount_validated.xlsx
-│ ├── Budget_validated.xlsx
-│ └── Financial_Transactions_validated.xlsx
+│   ├── Customers_validated.xlsx
+│   ├── Vendors_validated.xlsx
+│   ├── Headcount_validated.xlsx
+│   ├── Budget_validated.xlsx
+│   └── Financial_Transactions_validated.xlsx
 ├── Python_Notebook/
-│ └── financial_analysis.ipynb
+│   └── financial_analysis.ipynb
 ├── PowerBI/
-│ └── Financial_Performance_Dashboard.pbix
+│   └── Financial_Performance_Dashboard.pbix
 ├── Images/
-│ ├── dashboard-01-executive-overview.png
-│ ├── dashboard-02-budget-vs-actual.png
-│ ├── dashboard-03-customer-vendor.png
-│ ├── dashboard-04-headcount-cost.png
-│ ├── python-01-revenue-distribution.png
-│ ├── python-02-expense-distribution.png
-│ ├── python-03-expense-by-business-unit.png
-│ ├── python-04-expense-by-category.png
-│ └── python-05-revenue-expense-trend.png
+│   ├── dashboard-01-executive-overview.png
+│   ├── dashboard-02-budget-vs-actual.png
+│   ├── dashboard-03-customer-vendor.png
+│   ├── dashboard-04-headcount-cost.png
+│   ├── python-01-revenue-distribution.png
+│   ├── python-02-expense-distribution.png
+│   ├── python-03-expense-by-business-unit.png
+│   ├── python-04-expense-by-category.png
+│   └── python-05-revenue-expense-trend.png
 ├── Report/
-│ └── Executive_Summary.docx
+│   └── Executive_Summary.docx
 └── Presentation/
-└── Financial_Performance_Analysis.pptx
+    └── Financial_Performance_Analysis.pptx
+```
+
+## Data Dictionary
+
+| Table | Description |
+|---|---|
+| `customers` | Customer master data (name, segment, join date, region, status) |
+| `vendors` | Vendor master data (name, category, region, active status) |
+| `headcount` | Employee master data (name, business unit, join date, status, region, CTC) |
+| `budget` | Budget allocations by year, month, business unit |
+| `financial_transactions` | All financial transactions (date, amount, type, category, business unit, region) |
